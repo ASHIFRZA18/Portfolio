@@ -16,7 +16,7 @@ import { Toaster } from './components/ui/toaster';
 function App() {
   return (
     <ThemeProvider>
-      <div className="App bg-black dark:bg-black text-white dark:text-white overflow-x-hidden">
+      <div className="App bg-white dark:bg-black text-black dark:text-white overflow-x-hidden min-h-screen">
         <CustomCursor />
         <Navbar />
         <main>
