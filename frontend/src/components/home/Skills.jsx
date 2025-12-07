@@ -33,15 +33,15 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-black dark:bg-black">
+    <section id="skills" className="py-24 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Technical <span className="text-amber-500">Skills</span>
           </h2>
           <div className="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
-          <p className="text-gray-400 dark:text-gray-400 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-3xl mx-auto">
             A comprehensive toolkit for building modern web applications
           </p>
         </div>
@@ -53,7 +53,7 @@ const Skills = () => {
             return (
               <Card
                 key={index}
-                className="bg-zinc-900 border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 transform hover:scale-105 group"
+                className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 transform hover:scale-105 group"
               >
                 <CardContent className="p-8">
                   {/* Category Header */}
@@ -61,7 +61,7 @@ const Skills = () => {
                     <div className="p-3 bg-amber-500/10 rounded-lg group-hover:bg-amber-500 transition-colors">
                       <Icon className="w-6 h-6 text-amber-500 group-hover:text-black transition-colors" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white dark:text-white">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                       {category.title}
                     </h3>
                   </div>
@@ -72,7 +72,7 @@ const Skills = () => {
                       <Badge
                         key={skillIndex}
                         variant="secondary"
-                        className="bg-black border border-amber-500/30 text-gray-300 hover:bg-amber-500 hover:text-black hover:border-amber-500 transition-all duration-300 px-4 py-2 text-sm cursor-default"
+                        className="bg-white dark:bg-black border border-gray-300 dark:border-amber-500/30 text-gray-700 dark:text-gray-300 hover:bg-amber-500 hover:text-black hover:border-amber-500 transition-all duration-300 px-4 py-2 text-sm cursor-default"
                       >
                         {skill}
                       </Badge>
