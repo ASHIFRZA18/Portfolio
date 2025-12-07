@@ -9,8 +9,6 @@ html {
 }
 
 body {
-    background-color: #000000;
-    color: #ffffff;
     overflow-x: hidden;
 }
 
@@ -33,30 +31,46 @@ body {
 /* Selection colors */
 ::selection {
     background-color: rgba(251, 191, 36, 0.3);
-    color: #ffffff;
 }
 
 ::-moz-selection {
     background-color: rgba(251, 191, 36, 0.3);
-    color: #ffffff;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Dark mode */
+.dark ::-webkit-scrollbar {
+    width: 10px;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #f59e0b;
+    border-radius: 5px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #fbbf24;
+}
+
+/* Custom scrollbar - Light mode */
 ::-webkit-scrollbar {
     width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #000000;
+    background: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #f59e0b;
+    background: #d97706;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #fbbf24;
+    background: #f59e0b;
 }
 
 /* Animations */
@@ -79,71 +93,4 @@ body {
 img {
     max-width: 100%;
     height: auto;
-}
-
-/* Light mode overrides */
-html.light {
-    background-color: #ffffff;
-}
-
-html.light body {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* Ensure proper contrast in light mode */
-html.light .bg-black {
-    background-color: #ffffff !important;
-}
-
-html.light .bg-zinc-900 {
-    background-color: #f5f5f5 !important;
-}
-
-html.light .text-white {
-    color: #000000 !important;
-}
-
-html.light .text-gray-300 {
-    color: #1a1a1a !important;
-}
-
-html.light .text-gray-400 {
-    color: #404040 !important;
-}
-
-html.light .border-amber-500\/10,
-html.light .border-amber-500\/20 {
-    border-color: rgba(217, 119, 6, 0.2) !important;
-}
-
-html.light .hover\:bg-amber-500\/10:hover {
-    background-color: rgba(251, 191, 36, 0.1) !important;
-}
-
-/* Light mode navbar */
-html.light nav {
-    background-color: rgba(255, 255, 255, 0.8) !important;
-}
-
-html.light nav.bg-black\/80 {
-    background-color: rgba(255, 255, 255, 0.9) !important;
-}
-
-/* Light mode cards */
-html.light .bg-zinc-900 {
-    background-color: #f9f9f9 !important;
-}
-
-html.light .bg-black {
-    background-color: #ffffff !important;
-    border-color: rgba(217, 119, 6, 0.2) !important;
-}
-
-/* Light mode input fields */
-html.light input,
-html.light textarea {
-    background-color: #f5f5f5 !important;
-    color: #000000 !important;
-    border-color: rgba(217, 119, 6, 0.3) !important;
 }
