@@ -14,13 +14,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black dark:bg-black border-t border-amber-500/20">
+    <footer className="bg-gray-50 dark:bg-black border-t border-gray-200 dark:border-amber-500/20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold text-amber-500 mb-4 font-mono">&lt;AR/&gt;</h3>
-            <p className="text-gray-300 dark:text-gray-300 mb-4">
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
               Full-Stack Developer crafting modern web experiences with passion and precision.
             </p>
             <div className="flex space-x-4">
@@ -44,13 +44,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-white dark:text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {['Home', 'About', 'Skills', 'Experience', 'Projects', 'Blog', 'Contact'].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
-                    className="text-gray-300 dark:text-gray-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-300 hover:text-amber-500 dark:hover:text-amber-400 transition-colors"
                   >
                     {item}
                   </a>
@@ -61,9 +61,9 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold text-white dark:text-white mb-4">Get In Touch</h4>
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Get In Touch</h4>
             <ul className="space-y-3">
-              <li className="flex items-center text-gray-300 dark:text-gray-300">
+              <li className="flex items-center text-gray-600 dark:text-gray-300">
                 <Mail className="w-5 h-5 mr-3 text-amber-500" />
                 <a
                   href={`mailto:${personalInfo.email}`}
@@ -72,7 +72,7 @@ const Footer = () => {
                   {personalInfo.email}
                 </a>
               </li>
-              <li className="flex items-center text-gray-300 dark:text-gray-300">
+              <li className="flex items-center text-gray-600 dark:text-gray-300">
                 <Phone className="w-5 h-5 mr-3 text-amber-500" />
                 <a
                   href={`tel:${personalInfo.phone}`}
@@ -81,7 +81,7 @@ const Footer = () => {
                   {personalInfo.phone}
                 </a>
               </li>
-              <li className="flex items-center text-gray-300 dark:text-gray-300">
+              <li className="flex items-center text-gray-600 dark:text-gray-300">
                 <MapPin className="w-5 h-5 mr-3 text-amber-500" />
                 <span>{personalInfo.location}</span>
               </li>
@@ -90,12 +90,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-amber-500/20">
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-amber-500/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 dark:text-gray-400 text-sm mb-4 md:mb-0">
+            <p className="text-gray-500 dark:text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} {personalInfo.name}. All rights reserved.
             </p>
-            <p className="text-gray-400 dark:text-gray-400 text-sm">
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
               Designed & Built with <span className="text-amber-500">passion</span>
             </p>
           </div>

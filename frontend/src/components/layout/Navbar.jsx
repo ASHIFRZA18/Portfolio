@@ -52,7 +52,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-black/80 dark:bg-black/80 backdrop-blur-lg shadow-lg border-b border-amber-500/10'
+          ? 'bg-white/80 dark:bg-black/80 backdrop-blur-lg shadow-lg border-b border-amber-500/10'
           : 'bg-transparent'
       }`}
     >
@@ -74,7 +74,7 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="px-4 py-2 text-sm text-white dark:text-white hover:text-amber-500 dark:hover:text-amber-400 transition-colors relative group"
+                className="px-4 py-2 text-sm text-gray-700 dark:text-white hover:text-amber-500 dark:hover:text-amber-400 transition-colors relative group"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-500 group-hover:w-full transition-all duration-300"></span>
@@ -140,14 +140,14 @@ const Navbar = () => {
           isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-6 py-4 bg-black/95 dark:bg-black/95 backdrop-blur-lg border-t border-amber-500/10">
+        <div className="px-6 py-4 bg-white/95 dark:bg-black/95 backdrop-blur-lg border-t border-amber-500/10">
           <div className="flex flex-col space-y-2">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="px-4 py-3 text-white dark:text-white hover:text-amber-500 dark:hover:text-amber-400 hover:bg-amber-500/5 rounded-lg transition-all"
+                className="px-4 py-3 text-gray-700 dark:text-white hover:text-amber-500 dark:hover:text-amber-400 hover:bg-amber-500/5 rounded-lg transition-all"
               >
                 {item.name}
               </a>

@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black dark:bg-black"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white dark:bg-black"
     >
       {/* 3D Rotating Shapes Background */}
       <RotatingShapes />
@@ -45,7 +45,7 @@ const Hero = () => {
             )}
 
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-7xl font-bold text-white dark:text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white mb-6 leading-tight">
               Hi, I'm{' '}
               <span className="text-amber-500 inline-block hover:scale-105 transition-transform">
                 {personalInfo.name}
@@ -53,12 +53,12 @@ const Hero = () => {
             </h1>
 
             {/* Role */}
-            <h2 className="text-2xl md:text-4xl font-light text-gray-300 dark:text-gray-300 mb-6">
+            <h2 className="text-2xl md:text-4xl font-light text-gray-700 dark:text-gray-300 mb-6">
               {personalInfo.role}
             </h2>
 
             {/* Tagline */}
-            <p className="text-lg md:text-xl text-gray-400 dark:text-gray-400 mb-10 max-w-2xl">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl">
               {personalInfo.tagline}
             </p>
 
