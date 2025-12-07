@@ -7,15 +7,15 @@ import { Button } from '../ui/button';
 
 const Blog = () => {
   return (
-    <section id="blog" className="py-24 bg-zinc-900 dark:bg-zinc-900">
+    <section id="blog" className="py-24 bg-gray-50 dark:bg-zinc-900">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Blog & <span className="text-amber-500">Articles</span>
           </h2>
           <div className="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
-          <p className="text-gray-400 dark:text-gray-400 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-3xl mx-auto">
             Thoughts, tutorials, and insights on web development
           </p>
         </div>
@@ -25,7 +25,7 @@ const Blog = () => {
           {blogPosts.map((post) => (
             <Card
               key={post.id}
-              className="bg-black border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 transform hover:scale-[1.02] overflow-hidden group cursor-pointer"
+              className="bg-white dark:bg-black border-gray-200 dark:border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 transform hover:scale-[1.02] overflow-hidden group cursor-pointer"
             >
               {/* Post Image */}
               <div className="relative h-56 overflow-hidden">
@@ -34,10 +34,10 @@ const Blog = () => {
                   alt={post.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-transparent to-transparent opacity-70"></div>
                 <Badge
                   variant="outline"
-                  className="absolute top-4 right-4 border-amber-500 text-amber-500 bg-black/80 backdrop-blur-sm"
+                  className="absolute top-4 right-4 border-amber-500 text-amber-500 bg-white/80 dark:bg-black/80 backdrop-blur-sm"
                 >
                   {post.category}
                 </Badge>
@@ -45,7 +45,7 @@ const Blog = () => {
 
               <CardContent className="p-6">
                 {/* Post Meta */}
-                <div className="flex items-center gap-4 text-gray-400 dark:text-gray-400 text-sm mb-4">
+                <div className="flex items-center gap-4 text-gray-600 dark:text-gray-400 text-sm mb-4">
                   <span className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />
                     {new Date(post.date).toLocaleDateString('en-US', {
@@ -61,12 +61,12 @@ const Blog = () => {
                 </div>
 
                 {/* Post Title */}
-                <h3 className="text-xl font-bold text-white dark:text-white mb-3 group-hover:text-amber-500 transition-colors line-clamp-2">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-amber-500 transition-colors line-clamp-2">
                   {post.title}
                 </h3>
 
                 {/* Post Excerpt */}
-                <p className="text-gray-300 dark:text-gray-300 mb-4 leading-relaxed line-clamp-3">
+                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed line-clamp-3">
                   {post.excerpt}
                 </p>
 
