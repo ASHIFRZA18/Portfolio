@@ -82,37 +82,68 @@ img {
 }
 
 /* Light mode overrides */
-.light {
+html.light {
     background-color: #ffffff;
-    color: #000000;
 }
 
-.light body {
+html.light body {
     background-color: #ffffff;
     color: #000000;
 }
 
 /* Ensure proper contrast in light mode */
-.light .bg-black {
+html.light .bg-black {
     background-color: #ffffff !important;
 }
 
-.light .bg-zinc-900 {
+html.light .bg-zinc-900 {
     background-color: #f5f5f5 !important;
 }
 
-.light .text-white {
+html.light .text-white {
     color: #000000 !important;
 }
 
-.light .text-gray-300 {
+html.light .text-gray-300 {
+    color: #1a1a1a !important;
+}
+
+html.light .text-gray-400 {
     color: #404040 !important;
 }
 
-.light .text-gray-400 {
-    color: #666666 !important;
+html.light .border-amber-500\/10,
+html.light .border-amber-500\/20 {
+    border-color: rgba(217, 119, 6, 0.2) !important;
 }
 
-.light .border-amber-500\/20 {
+html.light .hover\:bg-amber-500\/10:hover {
+    background-color: rgba(251, 191, 36, 0.1) !important;
+}
+
+/* Light mode navbar */
+html.light nav {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+html.light nav.bg-black\/80 {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Light mode cards */
+html.light .bg-zinc-900 {
+    background-color: #f9f9f9 !important;
+}
+
+html.light .bg-black {
+    background-color: #ffffff !important;
+    border-color: rgba(217, 119, 6, 0.2) !important;
+}
+
+/* Light mode input fields */
+html.light input,
+html.light textarea {
+    background-color: #f5f5f5 !important;
+    color: #000000 !important;
     border-color: rgba(217, 119, 6, 0.3) !important;
 }
